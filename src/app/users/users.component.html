@@ -1,0 +1,35 @@
+<div matDialogTitle>
+  <h1>Users Form</h1>
+</div>
+
+<form [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+    <div class="row">
+      <mat-form-field >
+        <mat-label>First Name</mat-label>
+        <input type="text" matInput  formControlName="firstName">
+      </mat-form-field>
+
+      <mat-form-field >
+        <mat-label>Last Name</mat-label>
+        <input type="text" matInput formControlName="lastName">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input type="email" matInput formControlName="email">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>County</mat-label>
+        <input type="text" matInput type formControlName="county">
+      </mat-form-field>
+    </div>
+  </div>
+  <div matDialogActions class="action">
+    <button mat-raised-button  [mat-dialog-close]="false">Cancel</button>
+    <button  mat-raised-button type="submit"   class="btn btn-primary" color="primary">{{data ? 'Update': 'Save'}}</button>
+  </div>
+</form>
+
+
