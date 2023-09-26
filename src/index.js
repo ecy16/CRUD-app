@@ -39,16 +39,9 @@ fs.writeFile('db.json', newUser2, err => {
   console.log();
 });
 
-
-
-
-
-
-
-
 app.use(cors())
 app.use(express.json())
-const port = 3000
+// const port = 3000
 
 app.use(bodyParser.urlencoded({ extended: false }))
 

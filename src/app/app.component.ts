@@ -5,14 +5,23 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { UsersService } from './services/users.service';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort, MatSortModule } from '@angular/material/sort';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-
 })
 export class AppComponent implements OnInit {
+  // myObservable = new Observable((observer) => {
+  //   console.log('observable starts');
+  //   observer.next('1');
+  //   observer.next('2');
+  //   observer.next('3');
+  //   observer.next('4');
+  //   observer.next('5');
+  // });
+
   displayedColumns: string[] = [
     'firstName',
     'lastName',
@@ -25,40 +34,41 @@ export class AppComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(
-    private _dialog: MatDialog,
-    private _usersService: UsersService
-  ) {}
+  constructor(private _dialog: MatDialog, private api: UsersService) {}
 
   ngOnInit(): void {
     this.getUsersList();
   }
 
   openAddEditUsersForm() {
-    const dialogRef =this._dialog.open(UsersComponent)
+    const dialogRef = this._dialog.open(UsersComponent);
     dialogRef.afterClosed().subscribe({
-      next:(val)=>{
-        console.log(val)
-        if(val){
-          this.getUsersList();
-        }
-      }
-    })
+      next: (val) => {
+        console.log('newly_added_user', val);
+        this.getUsersList();
+
+        // if (val) {
+        //   this.getUsersList();
+        // }
+      },
+    });
   }
 
   getUsersList() {
-    this._usersService.getUsersList().subscribe({
+    this.api.getUsersList().subscribe({
       next: (res) => {
-        console.log(res.users);
-        this.dataSource = new MatTableDataSource(res.users);
+        this.dataSource = new MatTableDataSource(res);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
       },
-
-      error: (err) => {},
     });
   }
-  applyFilter(event: Event) {
+  editUser(row:any){
+    this._dialog.open(UsersComponent,{
+      data:row
+    });
+  }
+      applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
 
@@ -69,7 +79,6 @@ export class AppComponent implements OnInit {
   openEditForm(data: any) {
     const dialogRef = this._dialog.open(UsersComponent, {
       data,
-    
     });
     dialogRef.afterClosed().subscribe({
       next: (val) => {
@@ -80,16 +89,3 @@ export class AppComponent implements OnInit {
     });
   }
 }
-
-  /*
-  deleteUser(county: number) {
-    this._usersService.deleteUser(county).subscribe({
-      next: (res) => {
-        alert('user deleted successfuly');
-        this.getUsersList();
-      },
-      error: console.log,
-    });
-  }
-  }
-*/

@@ -28,7 +28,7 @@
   </div>
   <div matDialogActions class="action">
     <button mat-raised-button  [mat-dialog-close]="false">Cancel</button>
-    <button  mat-raised-button type="submit"   class="btn btn-primary" color="primary">{{data ? 'Update': 'Save'}}</button>
+    <button  mat-raised-button type="submit" (click)="  onFormSubmit() "  class="btn btn-primary" color="primary">{{actionBtn}}</button>
   </div>
 </form>
 
