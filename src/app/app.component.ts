@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild,Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { UsersComponent } from './users/users.component';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
@@ -34,10 +34,15 @@ export class AppComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
+  @Input() messageToChild: string | undefined;
+
   constructor(private _dialog: MatDialog, private api: UsersService) {}
 
   ngOnInit(): void {
     this.getUsersList();
+    this.messageToChild = 'Hello'
+    console.log(this.messageToChild);
+
   }
 
   openAddEditUsersForm() {

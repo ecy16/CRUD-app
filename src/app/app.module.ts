@@ -16,10 +16,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { PagesComponent } from './pages/pages.component';
 
 
 @NgModule({
-  declarations: [AppComponent, UsersComponent,],
+  declarations: [AppComponent, UsersComponent, PagesComponent,],
   imports: [
     BrowserModule,
     AppRoutingModule,
