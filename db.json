@@ -1,102 +1,59 @@
-{
-  "users": [
+[
+  [
     {
-      "firstName": "ecyla",
-      "lastName": "Michael's",
-      "email": "ecylamichaels16@gmail.com",
-      "county": "Nairobi",
-      "id": 1
-    },
+      "firstName": "claire",
+      "lastName": "nyambu",
+      "email": "claire@gmail.com",
+      "county": "40"
+    }
+  ],
+  [
     {
-      "firstName": "ecyla",
-      "lastName": "Michael's",
-      "email": "ecylamichaels16@gmail.com",
-      "county": "Nairobi",
-      "id": 2
-    },
+      "firstName": "claire",
+      "lastName": "nyambu",
+      "email": "claire@gmail.com",
+      "county": "40"
+    }
+  ],
+  [
     {
-      "firstName": "Nyambura",
-      "lastName": "Njuguna",
-      "email": "nyamburanjuguna16@gmail.com",
-      "county": "Nai",
-      "id": 3
-    },
+      "firstName": "claire",
+      "lastName": "nyambu",
+      "email": "claire@gmail.com",
+      "county": "40"
+    }
+  ],
+  [
     {
-      "firstName": "Nyambura",
-      "lastName": "Njuguna",
-      "email": "nyamburanjuguna16@gmail.com",
-      "county": "Nai",
-      "id": 4
-    },
+      "firstName": "claire",
+      "lastName": "nyambu",
+      "email": "claire@gmail.com",
+      "county": "40"
+    }
+  ],
+  [
     {
-      "firstName": "Nyambura",
-      "lastName": "Njuguna",
-      "email": "nyamburanjuguna16@gmail.com",
-      "county": "Nai",
-      "id": 5
-    },
+      "firstName": "claire",
+      "lastName": "nyambu",
+      "email": "claire@gmail.com",
+      "county": "40"
+    }
+  ],
+  [
     {
-      "firstName": "Nyambura",
-      "lastName": "Njuguna",
-      "email": "nyamburanjuguna16@gmail.com",
-      "county": "Nai",
-      "id": 6
-    },
+      "firstName": "claire",
+      "lastName": "nyambu",
+      "email": "claire@gmail.com",
+      "county": "40"
+    }
+  ],
+  [],
+  [
     {
-      "firstName": "me",
-      "lastName": "me",
-      "email": "me",
-      "county": "me",
-      "id": 7
-    },
-    {
-      "firstName": "me",
-      "lastName": "me",
-      "email": "me",
-      "county": "me",
-      "id": 8
-    },
-    {
-      "firstName": "g",
-      "lastName": "g",
-      "email": "g",
-      "county": "g",
-      "id": 9
-    },
-    {
-      "firstName": "g",
-      "lastName": "g",
-      "email": "g",
-      "county": "g",
-      "id": 10
-    },
-    {
-      "firstName": "mr",
-      "lastName": "mrs",
-      "email": "sis",
-      "county": "sissy",
-      "id": 11
-    },
-    {
-      "firstName": "mr",
-      "lastName": "mrs",
-      "email": "sis",
-      "county": "sissy",
-      "id": 12
-    },
-    {
-      "firstName": "h",
-      "lastName": "h",
-      "email": "h",
-      "county": "h",
-      "id": 13
-    },
-    {
-      "firstName": "h",
-      "lastName": "h",
-      "email": "h",
-      "county": "h",
-      "id": 14
+      "firstName": "claire",
+      "lastName": "nyambu",
+      "email": "claire@gmail.com",
+      "county": "40"
     }
   ]
-}
+]
